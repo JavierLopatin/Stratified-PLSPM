@@ -425,9 +425,9 @@ for(i in 1:iter){
 
 save(trainf, trainp, validationf, validationp, file='iterationData.RData')
 
-################################################################################
+###############################################################################
 ### GPP; model type 1
-################################################################################
+###############################################################################
 
 ###########################
 ## LOAD ITERATION DATA
@@ -449,9 +449,9 @@ lapply(semGPP$nRMSE, median)
 lapply(semGPP$PathF, median)
 lapply(semGPP$PathP, median)
 
-################################################################################
+###############################################################################
 ### ET ; model type 1
-################################################################################
+###############################################################################
 
 # models
 semET<- runSEMBlock('ET', innerET, outer, modes1, 1)
@@ -466,12 +466,12 @@ sig_betw_ET <- significanceTest(semET, 1); sig_betw_ET
 # median distribution values
 lapply(semET$R2, median)
 lapply(semET$nRMSE, median)
-lapply(semET$PathF, median); sig_ET
-lapply(semET$PathP, median); sig_ET
+lapply(semET$PathF, median); sig_ET[1,]
+lapply(semET$PathP, median); sig_ET[2,]
 
-################################################################################
+###############################################################################
 ### WUE ; model type 2
-################################################################################
+###############################################################################
 
 # models
 semWUE<- runSEMBlock('WUE', innerWUE, outer2, modes2, 2)
@@ -486,12 +486,12 @@ sig_betw_WUE <- significanceTest(semWUE, 2); sig_betw_WUE
 # median distribution values
 lapply(semWUE$R2, median)
 lapply(semWUE$nRMSE, median)
-lapply(semWUE$PathF, median);sig_WUE
-lapply(semWUE$PathP, median);sig_WUE
+lapply(semWUE$PathF, median);sig_WUE[1,]
+lapply(semWUE$PathP, median);sig_WUE[2,]
 
-################################################################################
+###############################################################################
 ### IWUE ; model type 3
-################################################################################
+###############################################################################
 
 # models
 semIWUE<- runSEMBlock('IWUEn', innerIWUE, outer3, modes1, 3)
@@ -509,9 +509,9 @@ lapply(semIWUE$nRMSE, median)
 lapply(semIWUE$PathF, median); sig_IWUE[1,]
 lapply(semIWUE$PathP, median); sig_IWUE[2,]
 
-################################################################################
+###############################################################################
 ### iWUE ; model type 1
-################################################################################
+###############################################################################
 
 # models
 semiWUE<- runSEMBlock('iWUE', inneriWUE, outer1, modes1, 1)
