@@ -12,6 +12,6 @@
 
 ### Model structures are the following:
 
-![alt text](https://github.com/JavierLopatin/Stratified-PLSPM/blob/master/Figures/path_structure.png =100x200)
+![alt text](https://github.com/JavierLopatin/Stratified-PLSPM/blob/master/Figures/path_structure.png)
 
 ## where model 1 correspond to GPP, ET, and iWUE, model 2 correspond to WUE, and model 3 correspond to IWUE.
